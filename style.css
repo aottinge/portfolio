@@ -173,14 +173,14 @@ body {
 
 /* Taille et affichage des images du carrousel */
 .carousel-item img {
-    max-width: 380px;
-    max-height: 260px;
-    width: auto;
-    height: auto;
+    width: 320px;
+    height: 200px;
     object-fit: contain;
+    display: block;
+    margin-bottom: 1em;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.12);
-    margin-bottom: 1em;
+    background: #fff;
 }
 
 /* Animation slide */
