@@ -29,18 +29,18 @@
                 <figcaption>Figure 1: Implémentation d’une méthode de ré-échantillonnage avec interpolation en Java </figcaption>
                 <div class="trace">
                     <p>
-                        <strong>Trace :</strong> La Figure 1 présente un extrait de code Java implémentant une méthode resample, utilisée pour effectuer un ré-échantillonnage d’un tableau de données numériques (par exemple un signal audio). Le ré-échantillonnage consiste à modifier la fréquence d’un signal, soit pour le compresser (en diminuant le nombre de points), soit pour l’affiner (en ajoutant des points intermédiaires). Cette fonction, développée dans le cadre d’un projet en Java, constitue une illustration concrète de la mise en œuvre d’un algorithme simple de traitement du signal, avec un objectif de transformation mathématique appliquée à une structure de données
+                        <strong>Trace :</strong> La Figure 1 présente un extrait de code Java implémentant une méthode <code>resample</code>, utilisée pour effectuer un ré-échantillonnage d’un tableau de données numériques (par exemple un signal audio). Le ré-échantillonnage consiste à modifier la fréquence d’un signal, soit pour le compresser (en diminuant le nombre de points), soit pour l’affiner (en ajoutant des points intermédiaires). Cette fonction, développée dans le cadre d’un projet en Java, constitue une illustration concrète de la mise en œuvre d’un algorithme simple de traitement du signal, avec un objectif de transformation mathématique appliquée à une structure de données.
                     </p>
                     <p>
-                        Le code repose sur un paramètre freqScale, qui indique le facteur de ré-échantillonnage à appliquer. Trois cas sont traités de façon distincte :
+                        Le code repose sur un paramètre <code>freqScale</code>, qui indique le facteur de ré-échantillonnage à appliquer. Trois cas sont traités de façon distincte :
+                        <ul>
+                            <li>Si le facteur est égal à <code>1</code>, la fonction renvoie une copie du signal d’origine, sans modification.</li>
+                            <li>Si <code>freqScale &gt; 1</code>, un sous-échantillonnage est effectué : l’algorithme sélectionne un échantillon tous les <code>freqScale</code>, ce qui réduit la taille du signal.</li>
+                            <li>Si <code>freqScale &lt; 1</code>, un sur-échantillonnage est réalisé via interpolation linéaire entre les valeurs : l’algorithme calcule de nouveaux points intermédiaires pour lisser le signal.</li>
+                        </ul>
                     </p>
-                    <ul>
-                        <li>Si le facteur est égal à 1, la fonction renvoie une copie du signal d’origine, sans modification.</li>
-                        <li>Si freqScale > 1, un sous-échantillonnage est effectué : l’algorithme sélectionne un échantillon tous les freqScale, ce qui réduit la taille du signal.</li>
-                        <li>Si freqScale < 1, un sur-échantillonnage est réalisé via interpolation linéaire entre les valeurs : l’algorithme calcule de nouveaux points intermédiaires pour lisser le signal.</li>
-                    </ul>
                     <p>
-                        Cette figure permet de mettre en évidence plusieurs savoirs : la maîtrise de la gestion des erreurs avec IllegalArgumentException, la compréhension des opérations d’interpolation numérique, et la capacité à écrire un code structuré, clair et performant avec un traitement différencié selon les cas.
+                        Cette figure met en évidence des savoirs tels que la gestion des erreurs avec <code>IllegalArgumentException</code>, la compréhension des opérations d’interpolation numérique, et la capacité à écrire un code structuré, clair et performant avec un traitement différencié selon les cas.
                     </p>
                     <p>
                         Elle témoigne également de savoir-faire pratiques importants, comme le contrôle précis des indices de tableau, l’usage combiné de types entiers et flottants, ainsi que la capacité à simplifier la complexité du traitement grâce à une structure conditionnelle bien organisée. Ce type d’implémentation constitue une base pertinente pour comparer différents algorithmes de traitement, en évaluant leur performance, leur fidélité au signal initial et leur coût algorithmique.

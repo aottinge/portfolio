@@ -26,22 +26,22 @@
         </div>
         <hr class="separateur">
         <div class="figure">
-                <img src="images/projet5/figure1.png" alt="Figure 1" />
-                <figcaption>Figure 1: un exemple d’interface texte et de saisie incorrecte dans le jeu Puissance X </figcaption>
-                <div class="trace">
-                    <p>
-                        <strong>Trace :</strong> La figure 1, montre une capture d’écran d’un jeu de type Puissance X, développé en Java avec la bibliothèque Boardifier-console. On y voit la grille de jeu au centre, les pions des joueurs en haut, et en bas une interaction utilisateur où le joueur 1 entre une saisie incorrecte (« A »), entraînant le message d’erreur : « Please enter a valid integer. »
-                    </p>
-                    <p>
-                        Cette situation illustre la gestion des entrées clavier. Le programme utilise un Scanner pour lire les saisies, puis les analyse à l’aide d’une méthode de validation. Celle-ci vérifie à la fois le type (ici un entier attendu entre 1 et 5) et la conformité de l’entrée. Une boucle assure que tant que la saisie n’est pas correcte, elle est rejetée sans faire planter le jeu.
-                    </p>
-                    <p>
-                        L’affichage de la grille et des pions dans la console repose sur l’héritage d’une classe de Boardifier, redéfinie pour personnaliser le rendu. Le polymorphisme permet à la bibliothèque de manipuler cette classe personnalisée comme si elle était celle d’origine.
-                    </p>
-                    <p>
-                        Cette figure illustre donc plusieurs savoirs (lecture/validation d’entrée, héritage, polymorphisme) et savoir-faire (mise en place d’une boucle de saisie robuste, personnalisation de l’affichage console), relevant des compétences en algorithmique et en conception objet.
-                    </p>
-                </div>
+            <img src="images/projet5/figure1.png" alt="Figure 1" />
+            <figcaption>Figure 1 : un exemple d’interface texte et de saisie incorrecte dans le jeu Puissance X</figcaption>
+            <div class="trace">
+                <p>
+                    <strong>Trace :</strong> La Figure 1 est une capture de l’environnement de développement <code>IntelliJ IDEA</code>, illustrant une partie du code Java d’un projet de jeu Puissance X basé sur la bibliothèque <code>Boardifier-console</code>. L’interface montre la grille de jeu, les pions des joueurs, et une interaction où le joueur 1 saisit une valeur incorrecte (<code>"A"</code>), ce qui déclenche le message d’erreur : <code>Please enter a valid integer.</code>
+                </p>
+                <p>
+                    Le code utilise un objet <code>Scanner</code> pour lire les entrées clavier, puis applique une méthode de validation qui vérifie le type attendu (un entier entre <code>1</code> et <code>5</code>) et la conformité de la saisie. Une boucle assure que tant que la saisie n’est pas correcte, elle est rejetée sans provoquer d’erreur dans le programme.
+                </p>
+                <p>
+                    L’affichage de la grille et des pions repose sur l’héritage d’une classe de <code>Boardifier</code>, redéfinie pour personnaliser le rendu. Le polymorphisme permet à la bibliothèque de manipuler cette classe personnalisée comme si elle était celle d’origine.
+                </p>
+                <p>
+                    Cette figure met en évidence des savoirs tels que la lecture et la validation d’entrée, l’héritage, le polymorphisme, ainsi que des savoir-faire comme la mise en place d’une boucle de saisie robuste et la personnalisation de l’affichage console, relevant des compétences en algorithmique et en conception objet.
+                </p>
+            </div>
         </div>
         <hr class="separateur">
         <div class="figure">
@@ -49,13 +49,16 @@
             <figcaption>Figure 2: application du paradigme MVC dans le cadre d’un jeu de plateau avec framework</figcaption>
             <div class="trace">
                 <p>
-                    <strong>Trace :</strong> La Figure 2 est une capture de l’environnement de développement IntelliJ Idea, utilisé pour programmer le jeu Puissance X en Java dans le cadre d’un projet encadré. La bibliothèque imposée, boardifier, est conçue pour créer des jeux de plateau selon le paradigme MVC (Modèle, Vue, Contrôleur), un principe fondamental en informatique pour structurer proprement une application.
+                    <strong>Trace :</strong> La Figure 2 est une capture de l’environnement de développement <code>IntelliJ IDEA</code>, utilisé pour programmer le jeu Puissance X en Java dans le cadre d’un projet encadré. La bibliothèque imposée, <code>boardifier</code>, est conçue pour créer des jeux de plateau selon le paradigme <code>MVC</code> (<code>Modèle</code>, <code>Vue</code>, <code>Contrôleur</code>), un principe fondamental en informatique pour structurer proprement une application.
                 </p>
                 <p>
-                    Ce paradigme impose de séparer les rôles : le modèle contient les données du jeu, la vue affiche ces données à l’utilisateur, et le contrôleur gère les interactions. Cette séparation est visible dans la partie gauche de la Figure 2, où trois répertoires distincts model, view et control sont soulignés en rouge. Cette organisation permet une répartition claire du code et facilite le travail en équipe.
+                    Ce paradigme impose de séparer les rôles : le <code>modèle</code> contient les données du jeu, la <code>vue</code> affiche ces données à l’utilisateur, et le <code>contrôleur</code> gère les interactions. Cette séparation est visible dans la partie gauche de la Figure 2, où trois répertoires distincts <code>model</code>, <code>view</code> et <code>control</code> sont soulignés en rouge. Cette organisation permet une répartition claire du code et facilite le travail en équipe.
                 </p>
                 <p>
-                    Dans la partie droite de la figure, trois zones de code sont également encadrées en rouge. Elles correspondent à la création des objets représentant les composants MVC. Le modèle est initialisé en premier et utilisé pour créer la vue (PuissanceXStageModel), qui configure l’affichage du jeu. Ensuite, le contrôleur (PuissanceXController) est créé en recevant le modèle et la vue, afin de relier les actions du joueur à la logique du jeu et au rafraîchissement de l’affichage.
+                    Dans la partie droite de la figure, trois zones de code sont également encadrées en rouge. Elles correspondent à la création des objets représentant les composants <code>MVC</code>. Le modèle est initialisé en premier et utilisé pour créer la vue (<code>PuissanceXStageModel</code>), qui configure l’affichage du jeu. Ensuite, le contrôleur (<code>PuissanceXController</code>) est créé en recevant le modèle et la vue, afin de relier les actions du joueur à la logique du jeu et au rafraîchissement de l’affichage.
+                </p>
+                <p>
+                    Cette figure met en évidence des savoirs liés à la structuration d’une application selon le paradigme <code>MVC</code>, à l’organisation modulaire du code, et à la programmation orientée objet en Java. Elle illustre aussi des savoir-faire comme la séparation des responsabilités, la création de classes spécialisées et la collaboration entre composants pour une application interactive robuste.
                 </p>
             </div>
         </div>

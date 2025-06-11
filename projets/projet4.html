@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Projet 4 : Site de E-commerce en Flask - Portfolio Axel</title>
+    <title>Projet 3 : Site de E-commerce en Flask - Portfolio Axel</title>
     <link rel="stylesheet" href="../style.css">
     <link rel="icon" type="image/png" href="images/logo.png">
 </head>
@@ -15,21 +15,36 @@
         </ul>
     </nav>
     <section class="section">
-        <h2>Projet 4 : Site de E-commerce en Flask</h2>
-        <div class="zigzag">
-            <div class="figure">
-                <img src="images/projet4.png" alt="Projet 4 : E-commerce Flask" />
-                <figcaption>Figure 4 : Page d'accueil du site de E-commerce développé avec Flask.</figcaption>
-            </div>
-            <div class="texte">
+        <h2>Projet 3 : Site de E-commerce en Flask</h2>
+        <div class="texte">
+            <p>
+                <strong>Analyse :</strong> Ce projet consistait à développer un site de E-commerce complet avec Flask. J'ai mis en place la gestion des produits, du panier, des commandes, d'un historique, d'une liste d'envie et de l'authentification des utilisateurs.
+            </p>
+            <p>
+                Ce projet m'a permis de consolider mes compétences en développement et de comprendre les enjeux de la sécurité et de la gestion des données dans une application réelle.
+            </p>
+        </div>
+        <hr class="separateur">
+        <div class="figure">
+            <img src="images/projet4/figure1.png" alt="Projet 4 : E-commerce Flask" style="max-width: 540px; width: 100%;" />
+            <figcaption>Figure 4 : Page d'accueil du site de E-commerce développé avec Flask.</figcaption>
+            <div class="trace">
                 <p>
-                    <strong>Analyse :</strong> Ce projet consistait à développer un site de E-commerce complet avec Flask. J'ai mis en place la gestion des produits, du panier, des commandes et de l'authentification des utilisateurs.
+                    <strong>Trace :</strong> La Figure 4 est une capture de l’environnement de développement Visual Studio Code, illustrant une partie du code Python d’un projet web basé sur Flask. Le fichier affiché (<code>client_liste_envies.py</code>) contient une fonction appelée <code>client_liste_envies_show</code>, associée à une route <code>/client/envies/show</code>. Cette fonction gère l’affichage des données relatives aux envies et à l’historique de consultation d’un client connecté.
                 </p>
                 <p>
-                    <strong>Trace :</strong> Le site propose une interface utilisateur moderne, la gestion sécurisée des sessions et l'intégration d'une base de données pour stocker les informations produits et clients.
+                    Le code met en œuvre des requêtes SQL exécutées directement via un curseur obtenu à partir d’une base de données SQLite ou MySQL (fonction <code>get_db().cursor()</code>). Plusieurs traitements sont réalisés successivement :
+                    <ul>
+                        <li>D’abord, la récupération de la liste des envies du client, triée par date d’ajout, en joignant trois tables (<code>liste_envie</code>, <code>velo</code>, <code>type_velo</code>).</li>
+                        <li>Ensuite, la récupération de l’historique de consultation des articles (ici des vélos), limité aux 6 derniers articles consultés, en triant par date de consultation.</li>
+                        <li>Enfin, deux requêtes supplémentaires permettent de compter le nombre total d’articles dans la liste d’envies et dans l’historique.</li>
+                    </ul>
                 </p>
                 <p>
-                    Ce projet m'a permis de consolider mes compétences en développement web full-stack et de comprendre les enjeux de la sécurité et de la gestion des données dans une application réelle.
+                    Cette figure permet de mettre en évidence des savoirs liés à la programmation web en Python avec Flask, à la manipulation de bases de données relationnelles, et à l’écriture de requêtes SQL avec jointures. On observe également des savoir-faire tels que le traitement sécurisé des requêtes SQL avec paramètres, la gestion de sessions utilisateur, et la capacité à structurer un traitement côté serveur pour préparer les données destinées à l’affichage dans une interface web.
+                </p>
+                <p>
+                    Le code est lisible, bien commenté, et montre une bonne maîtrise des étapes de collecte et d’organisation des données à partir d’une base, en réponse à une requête HTTP. Il s’inscrit donc dans une logique typique de développement d’une application web dynamique.
                 </p>
             </div>
         </div>
