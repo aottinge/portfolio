@@ -36,29 +36,67 @@
 /* Présentation en zigzag */
 .zigzag {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     margin-bottom: 3em;
+    flex-direction: row;
 }
 .zigzag .texte, .zigzag .figure {
-    width: 45%;
+    width: 48%;
+}
+.zigzag .texte {
+    order: 1;
+    text-align: left;
+}
+.zigzag .figure {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .zigzag:nth-child(even) {
     flex-direction: row-reverse;
 }
 
+@media (max-width: 900px) {
+    .zigzag {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .zigzag .texte, .zigzag .figure {
+        width: 100%;
+    }
+    .zigzag .figure {
+        margin-top: 2em;
+    }
+}
+
 /* Figures */
+.figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .figure img {
     width: 100%;
+    max-width: 350px;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section .figure:nth-of-type(3) img {
+    max-width: 540px;
+}
+.figure .trace {
+    margin-top: 1em;
+    width: 90%;
+    border-radius: 8px;
 }
 .figure figcaption {
     font-size: 0.9em;
     color: #555;
     margin-top: 0.5em;
 }
-
 /* Titres */
 h1, h2, h3 {
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -275,4 +313,88 @@ body {
     transform: scale(1.08);
 }
 
+/* Séparateur */
+.separateur {
+    border: none;
+    border-top: 2px solid #000000;
+    margin: 2em 0;
+    width: 100%;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2em 0 1em 0;
+    font-size: 1em;
+    margin-top: auto;
+    letter-spacing: 0.03em;
+}
+footer a {
+    color: #b5b3ab;
+    text-decoration: underline;
+}
+footer a:hover {
+    color: #fff;
+}
+
+/* Carte de contact */
+.contact-card {
+    max-width: 400px;
+    margin: 3em auto 0 auto;
+    padding: 2em 2em 1.5em 2em;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    gap: 2em;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.contact-item i {
+    font-size: 1.6em;
+    color: #000;
+    background: #f7f7f7;
+    border-radius: 50%;
+    padding: 0.4em;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.contact-item a {
+    color: #000;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+    word-break: break-all;
+}
+
+.contact-item a:hover {
+    color: #b5b3ab;
+    text-decoration: underline;
+}
+
 /* ...autres styles au besoin... */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}

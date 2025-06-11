@@ -16,23 +16,52 @@
     </nav>
     <section class="section">
         <h2>Projet 5 : PuissanceX avec interface et robot</h2>
-        <div class="zigzag">
-            <div class="figure">
-                <img src="images/projet5.png" alt="Projet 5 : PuissanceX" />
-                <figcaption>Figure 5 : Interface du jeu PuissanceX et robot associé.</figcaption>
-            </div>
-            <div class="texte">
+        <div class="texte">
+            <p>
+                <strong>Sujet :</strong> Ce projet m'a permis de développer un jeu PuissanceX interactif, jouable à la fois via une interface graphique et avec un robot. J'ai travaillé sur la logique du jeu, mes compétences d'interaction homme machine (IHM), ainsi que sur la gestion des interactions utilisateur.
+            </p>
+            <p>
+                Ce projet m'a permis de combiner des compétences en programmation logicielle et interaction homme-machine.
+            </p>
+        </div>
+        <hr class="separateur">
+        <div class="figure">
+                <img src="images/projet5/figure1.png" alt="Figure 1" />
+                <figcaption>Figure 1: un exemple d’interface texte et de saisie incorrecte dans le jeu Puissance X </figcaption>
+                <div class="trace">
+                    <p>
+                        <strong>Trace :</strong> La figure 1, montre une capture d’écran d’un jeu de type Puissance X, développé en Java avec la bibliothèque Boardifier-console. On y voit la grille de jeu au centre, les pions des joueurs en haut, et en bas une interaction utilisateur où le joueur 1 entre une saisie incorrecte (« A »), entraînant le message d’erreur : « Please enter a valid integer. »
+                    </p>
+                    <p>
+                        Cette situation illustre la gestion des entrées clavier. Le programme utilise un Scanner pour lire les saisies, puis les analyse à l’aide d’une méthode de validation. Celle-ci vérifie à la fois le type (ici un entier attendu entre 1 et 5) et la conformité de l’entrée. Une boucle assure que tant que la saisie n’est pas correcte, elle est rejetée sans faire planter le jeu.
+                    </p>
+                    <p>
+                        L’affichage de la grille et des pions dans la console repose sur l’héritage d’une classe de Boardifier, redéfinie pour personnaliser le rendu. Le polymorphisme permet à la bibliothèque de manipuler cette classe personnalisée comme si elle était celle d’origine.
+                    </p>
+                    <p>
+                        Cette figure illustre donc plusieurs savoirs (lecture/validation d’entrée, héritage, polymorphisme) et savoir-faire (mise en place d’une boucle de saisie robuste, personnalisation de l’affichage console), relevant des compétences en algorithmique et en conception objet.
+                    </p>
+                </div>
+        </div>
+        <hr class="separateur">
+        <div class="figure">
+            <img src="images/projet5/figure2.png" alt="Figure 2" />
+            <figcaption>Figure 2: application du paradigme MVC dans le cadre d’un jeu de plateau avec framework</figcaption>
+            <div class="trace">
                 <p>
-                    <strong>Analyse :</strong> Ce projet innovant m'a permis de développer un jeu PuissanceX interactif, jouable à la fois via une interface graphique et avec un robot physique. J'ai travaillé sur la logique du jeu, la communication entre l'interface et le robot, ainsi que sur la gestion des interactions utilisateur.
+                    <strong>Trace :</strong> La Figure 2 est une capture de l’environnement de développement IntelliJ Idea, utilisé pour programmer le jeu Puissance X en Java dans le cadre d’un projet encadré. La bibliothèque imposée, boardifier, est conçue pour créer des jeux de plateau selon le paradigme MVC (Modèle, Vue, Contrôleur), un principe fondamental en informatique pour structurer proprement une application.
                 </p>
                 <p>
-                    <strong>Trace :</strong> Le projet comprend le code du jeu, l'interface utilisateur, ainsi que le programme embarqué du robot. J'ai également documenté les protocoles de communication et réalisé des tests pour garantir la fiabilité de l'ensemble.
+                    Ce paradigme impose de séparer les rôles : le modèle contient les données du jeu, la vue affiche ces données à l’utilisateur, et le contrôleur gère les interactions. Cette séparation est visible dans la partie gauche de la Figure 2, où trois répertoires distincts model, view et control sont soulignés en rouge. Cette organisation permet une répartition claire du code et facilite le travail en équipe.
                 </p>
                 <p>
-                    Ce projet m'a permis de combiner des compétences en programmation logicielle, électronique et interaction homme-machine.
+                    Dans la partie droite de la figure, trois zones de code sont également encadrées en rouge. Elles correspondent à la création des objets représentant les composants MVC. Le modèle est initialisé en premier et utilisé pour créer la vue (PuissanceXStageModel), qui configure l’affichage du jeu. Ensuite, le contrôleur (PuissanceXController) est créé en recevant le modèle et la vue, afin de relier les actions du joueur à la logique du jeu et au rafraîchissement de l’affichage.
                 </p>
             </div>
         </div>
     </section>
+    <footer>
+        © 2024 Axel Ottinger — Portfolio | <a href="mailto:axelottinger1@gmail.com">Contact</a>
+    </footer>
 </body>
 </html>
