@@ -27,10 +27,10 @@
         <hr class="separateur">
         <div class="figure">
             <img src="images/projet4/figure1.png" alt="Projet 4 : E-commerce Flask" style="max-width: 540px; width: 100%;" />
-            <figcaption>Figure 4 : Page d'accueil du site de E-commerce développé avec Flask.</figcaption>
+            <figcaption>Figure 1 : Traitement des envies et historique utilisateur (Flask + SQL)</figcaption>
             <div class="trace">
                 <p>
-                    <strong>Trace :</strong> La Figure 4 est une capture de l’environnement de développement Visual Studio Code, illustrant une partie du code Python d’un projet web basé sur Flask. Le fichier affiché (<code>client_liste_envies.py</code>) contient une fonction appelée <code>client_liste_envies_show</code>, associée à une route <code>/client/envies/show</code>. Cette fonction gère l’affichage des données relatives aux envies et à l’historique de consultation d’un client connecté.
+                    <strong>Trace :</strong> La Figure 1 est une capture de l’environnement de développement Visual Studio Code, illustrant une partie du code Python d’un projet web basé sur Flask. Le fichier affiché (<code>client_liste_envies.py</code>) contient une fonction appelée <code>client_liste_envies_show</code>, associée à une route <code>/client/envies/show</code>. Cette fonction gère l’affichage des données relatives aux envies et à l’historique de consultation d’un client connecté.
                 </p>
                 <p>
                     Le code met en œuvre des requêtes SQL exécutées directement via un curseur obtenu à partir d’une base de données SQLite ou MySQL (fonction <code>get_db().cursor()</code>). Plusieurs traitements sont réalisés successivement :
@@ -45,6 +45,25 @@
                 </p>
                 <p>
                     Le code est lisible, bien commenté, et montre une bonne maîtrise des étapes de collecte et d’organisation des données à partir d’une base, en réponse à une requête HTTP. Il s’inscrit donc dans une logique typique de développement d’une application web dynamique.
+                </p>
+            </div>
+        </div>
+        <hr class="separateur">
+        <div class="figure">
+            <img src="images/projet4/figure2.png" alt="Interface de visualisation statistique" style="max-width: 540px; width: 100%;" />
+            <figcaption>Figure 2 : Interface de datavisualisation des envies et consultations par catégorie.</figcaption>
+            <div class="trace">
+                <p>
+                    <strong>Trace :</strong> La Figure 2 est une capture d'écran d'une interface web de visualisation statistique, réalisée dans le cadre d'un projet de développement en Python, en lien avec une base de données e-commerce. Elle illustre l'exploitation de la datavisualisation (dataviz) pour représenter et analyser des données issues du comportement des utilisateurs : ici, les articles ajoutés aux wishlists (listes d'envies) et les consultations par catégorie de vélos.
+                </p>
+                <p>
+                    Dans la partie supérieure de l'interface, un tableau synthétise les données par catégorie : nombre d'articles présents dans les wishlists et nombre de consultations sur les 30 derniers jours. Ces chiffres sont automatiquement extraits et agrégés depuis la base, via des requêtes SQL. En dessous, deux graphiques sont générés pour offrir une lecture plus visuelle des données : un histogramme pour les articles dans les wishlists, et un autre pour les consultations en fonction de la catégorie.
+                </p>
+                <p>
+                    Cette figure met en évidence des savoirs liés à la représentation graphique de données avec une bibliothèque de dataviz et Flask. Elle mobilise également des savoir-faire techniques comme la connexion dynamique entre les requêtes SQL et les éléments graphiques, le rafraîchissement conditionnel des données, ou encore l'affichage interactif piloté par des menus déroulants.
+                </p>
+                <p>
+                    Enfin, cette interface est un bon exemple de traitement et visualisation de données en temps réel, utile pour l'analyse d'activité utilisateur ou la prise de décision marketing. Elle prouve la capacité à transformer des données brutes en indicateurs clairs, adaptés à une interface web moderne.
                 </p>
             </div>
         </div>
